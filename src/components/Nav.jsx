@@ -43,7 +43,7 @@ function Nav() {
           <a href="">Community</a>
         </div>}
 
-        <button className="button-main nav_container_button">Get Started</button>
+        <button className="button button-primary nav_container_button">Get Started</button>
 
       </div>
     </div>

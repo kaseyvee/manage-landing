@@ -1,0 +1,33 @@
+.bottom-banner {
+  @include center;
+  background-color: $red;
+  width: 100%;
+  
+  &_container {
+    @include center(column);
+    gap: 2rem;
+    padding: 5rem 2rem;
+    width: 100%;
+    max-width: 70rem;
+    
+    &_header {
+      color: $white;
+      text-align: center;
+      font-size: 2.25rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .bottom-banner {
+    &_container {
+      flex-direction: row;
+      justify-content: space-between;
+      
+      &_header {
+        max-width: 30rem;
+        text-align: left;
+      }
+    }
+  }
+}
