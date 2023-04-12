@@ -1,13 +1,16 @@
 .hero {
+  $padding: 2rem;
+
   @include center(column);
   flex-direction: column-reverse;
   gap: 2rem;
   text-align: center;
-  padding: 2rem;
-  height: 100vh;
+  padding: $padding;
+  height: calc(100vh - $padding * 2);
 
   &_image {
     display: flex;
+    max-width: 22rem;
 
     img {
       object-fit: cover;
@@ -22,17 +25,22 @@
 }
 
 @media (min-width: 769px) {
+  
   .hero {
+    $marginTop: 3rem;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
     text-align: left;
     max-width: 70rem;
     padding: 0 2rem;
-    margin-top: 3rem;
+    margin-top: $marginTop;
+    height: calc(100vh - $marginTop);
 
     &_image {
       grid-column: 2;
+      max-width: none;
     }
 
     &_main {

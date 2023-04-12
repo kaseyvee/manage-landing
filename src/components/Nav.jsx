@@ -17,11 +17,11 @@ function Nav() {
   }
 
   return (
-    <div className='nav'>
+    <nav className='nav'>
       <div className="nav_container">
         <img
           className="nav_container_logo"
-          src="logo.svg"
+          src="logo-nav.svg"
           alt="manage logo"
         />
 
@@ -46,7 +46,7 @@ function Nav() {
         <button className="button button-primary nav_container_button">Get Started</button>
 
       </div>
-    </div>
+    </nav>
   );
 }
 

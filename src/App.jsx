@@ -1,4 +1,5 @@
 import BottomBanner from "./components/BottomBanner"
+import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Nav from "./components/Nav"
 
@@ -17,6 +18,8 @@ function App() {
         />
         <img src="bg-simplify-section-mobile.svg" alt="background" />
       </picture> */}
+      
+      <Footer />
     </div>
   )
 }
