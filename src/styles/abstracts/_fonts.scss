@@ -5,4 +5,16 @@
   font-weight: $fontWeight;
 }
 
+p, span, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+p, span {
+  color: $grey;
+}
+
+h1, h2, h3, h4 {
+  color: $blue;
+}
+
 // 400, 500, 700

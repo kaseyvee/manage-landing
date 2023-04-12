@@ -1,3 +1,73 @@
+$navPadding: 2rem;
+
 .nav {
+  // background-color: green;
+  position: absolute;
+  padding: 3rem $navPadding 1rem $navPadding;
+  width: calc(100% - ($navPadding * 2));
+  height: 2rem;
   
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
+    &_logo {
+      width: 7rem;
+    }
+  
+    &_mobile-menu {
+      @include center;
+      width: 25px;
+      height: 25px;
+    }
+  
+    &_items {
+      @include vietnam(700);
+      @include center(column);
+      gap: 2rem;
+      position: absolute;
+      width: calc(100% - ($navPadding * 2));
+      top: 7rem;
+      background-color: $white;
+      padding: 3rem 0;
+      
+      a {
+        color: $blue;
+      }
+    }
+  
+    &_button {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .nav {
+    display: flex;
+    justify-content: center;
+    
+    &_container {
+      max-width: 70rem;
+
+      &_logo {
+        width: 9rem;
+      }
+  
+      &_items {
+        position: static;
+        background-color: transparent;
+        flex-direction: row;
+        font-weight: 500;
+        font-size: 0.75rem;
+        width: fit-content;
+      }
+  
+      &_button {
+        display: block;
+      }
+    }
+  }
 }

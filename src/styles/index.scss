@@ -2,5 +2,29 @@
 @import "components";
 
 :root {
+  @include vietnam;
   font-size: 16px;
+
+  body {
+    margin: 0;
+    background-color: $white;
+
+    a {
+      text-decoration: none;
+    }
+
+    .App {
+      // picture {
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+
+      //   img {
+      //     object-fit: cover;
+      //     width: 100%;
+      //   }
+      // }
+    }
+  }
 }
