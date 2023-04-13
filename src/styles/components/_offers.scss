@@ -32,6 +32,7 @@
         background-color: $transparentRed;
         font-size: 0.6rem;
         margin-left: 1rem;
+        border-radius: 30px 0 0 30px;
 
         &_number {
           background-color: $red;
@@ -54,6 +55,7 @@
     grid-template-columns: 1fr 1fr;
     max-width: 70rem;
     padding: 0 2rem;
+    gap: 1rem;
 
     &_main {
       justify-content: flex-start;
@@ -73,6 +75,7 @@
     &_list {
       margin: 0;
       align-items: flex-end;
+      gap: 2rem;
 
       &_item {
 
@@ -87,6 +90,7 @@
           font-size: 1rem;
           padding: 0;
           margin-left: 6.5rem;
+          margin-top: 0.5rem;
           max-width: 28rem;
         }
       }
