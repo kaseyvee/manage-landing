@@ -1,16 +1,24 @@
+import Nav from "./components/Nav"
+
+import Hero from "./components/Hero"
+import Offers from "./components/Offers"
+import Testimonials from "./components/Testimonials"
+
 import BottomBanner from "./components/BottomBanner"
 import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import Nav from "./components/Nav"
 
 function App() {
 
   return (
     <div className="App">
       <Nav />
-      <Hero />
 
+      <Hero />
+      <Offers />
+      <Testimonials />
+      
       <BottomBanner />
+      <Footer />
 
       {/* <picture>
         <source
@@ -18,8 +26,6 @@ function App() {
         />
         <img src="bg-simplify-section-mobile.svg" alt="background" />
       </picture> */}
-      
-      <Footer />
     </div>
   )
 }

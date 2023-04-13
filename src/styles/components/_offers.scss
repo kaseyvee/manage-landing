@@ -1,0 +1,95 @@
+.offers {
+  display: flex;
+  flex-direction: column;
+
+  &_main {
+    @include center(column);
+    gap: 1rem;
+    text-align: center;
+    padding: 2rem;
+
+    &_header {
+      font-size: 1.75rem;
+    }
+
+    &_description {
+      font-size: 0.85rem;
+      max-width: 21rem;
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1rem 0rem 4rem 0;
+
+    &_item {
+      &_header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background-color: $transparentRed;
+        font-size: 0.6rem;
+        margin-left: 1rem;
+
+        &_number {
+          background-color: $red;
+          color: $white;
+          padding: 0.5rem 1.5rem;
+        }
+      }
+
+      &_description {
+        font-size: 0.85rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 70rem;
+    padding: 0 2rem;
+
+    &_main {
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      padding: 0;
+
+      &_header {
+        font-size: 2.25rem;
+      }
+
+      &_description {
+        font-size: 1rem;
+      }
+    }
+
+    &_list {
+      margin: 0;
+      align-items: flex-end;
+
+      &_item {
+
+        &_header {
+          font-size: 0.75rem;
+          background-color: transparent;
+          margin-left: 0;
+          gap: 2rem;
+        }
+
+        &_description {
+          font-size: 1rem;
+          padding: 0;
+          margin-left: 6.5rem;
+          max-width: 28rem;
+        }
+      }
+    }
+  }
+}
