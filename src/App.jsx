@@ -10,7 +10,7 @@ import Footer from "./components/Footer"
 function App() {
 
   return (
-    <div className="App">
+    <main className="App">
       <Nav />
 
       <Hero />
@@ -26,7 +26,7 @@ function App() {
         />
         <img src="bg-simplify-section-mobile.svg" alt="background" />
       </picture> */}
-    </div>
+    </main>
   )
 }
 
