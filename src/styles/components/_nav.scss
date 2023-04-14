@@ -5,6 +5,8 @@ $navPadding: 2rem;
   padding: 3rem $navPadding 1rem $navPadding;
   width: calc(100% - ($navPadding * 2));
   height: 2rem;
+  background-color: $white;
+  z-index: 100;
   
   &_container {
     display: flex;

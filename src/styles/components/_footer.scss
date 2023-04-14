@@ -73,12 +73,12 @@
     &_socials {
       display: flex;
       flex-direction: row;
+      align-items: center;
       gap: 2rem;
   
       img {
         width: 2rem;
         cursor: pointer;
-        // transition-duration: 200ms;
   
         &:hover {
           filter: invert(45%) sepia(80%) saturate(2522%) hue-rotate(340deg) brightness(101%) contrast(90%);

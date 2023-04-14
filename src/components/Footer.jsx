@@ -55,11 +55,21 @@ function Footer() {
         </div>
 
         <div className="footer_container_socials">
-          <img src="icon-facebook.svg" alt="facebook icon" />
-          <img src="icon-youtube.svg" alt="youtube icon" />
-          <img src="icon-twitter.svg" alt="twitter icon" />
-          <img src="icon-pinterest.svg" alt="pinterest icon" />
-          <img src="icon-instagram.svg" alt="instagram icon" />
+          <a href="">
+            <img src="icon-facebook.svg" alt="facebook icon" />
+          </a>
+          <a href="">
+            <img src="icon-youtube.svg" alt="youtube icon" />
+          </a>
+          <a href="">
+            <img src="icon-twitter.svg" alt="twitter icon" />
+          </a>
+          <a href="">
+            <img src="icon-pinterest.svg" alt="pinterest icon" />
+          </a>
+          <a href="">
+            <img src="icon-instagram.svg" alt="instagram icon" />
+          </a>
         </div>
 
         <div className="footer_container_logo">

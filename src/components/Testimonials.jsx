@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "../data";
+import { motion } from "framer-motion";
 
 function Testimonials() {
   const [selectedTest, setSelectedTest] = useState(0)
@@ -44,7 +45,11 @@ function Testimonials() {
   })
 
   return (
-    <div className="testimonials" id="testimonials">
+    <motion.div
+      className="testimonials"
+      whileInView={{ y: [100, 0], opacity: [0, 1] }}
+      transition={{ duration: 2 }}
+    >
       <h1 className="testimonials_header">
         What they've said
       </h1>
@@ -58,7 +63,7 @@ function Testimonials() {
       </div>
 
       <button className="button button-primary">Get Started</button>
-    </div>
+    </motion.div>
   );
 }
 
