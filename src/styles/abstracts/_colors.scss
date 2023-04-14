@@ -1,7 +1,9 @@
 $alpha: 0.1;
+$alpha2: 0.01;
 
 $red: hsl(12, 88%, 59%);
 $transparentRed: hsl(12, 88%, 59%, $alpha);
+$transparentRed2: hsl(12, 88%, 59%, $alpha2);
 $lightRed: hsl(13, 100%, 96%);
 
 $blue: hsl(228, 39%, 23%);
