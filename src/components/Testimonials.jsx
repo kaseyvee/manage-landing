@@ -47,6 +47,7 @@ function Testimonials() {
   return (
     <motion.div
       className="testimonials"
+      viewport={{ once: true }}
       whileInView={{ y: [100, 0], opacity: [0, 1] }}
       transition={{ duration: 2 }}
     >
