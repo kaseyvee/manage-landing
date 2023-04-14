@@ -1,7 +1,12 @@
+import { motion } from "framer-motion";
+
 function Hero() {
   return (
     <div className='hero'>
-      <div className="hero_main">
+      <motion.div
+        className="hero_main"
+        animate={{ x: [-100, 0], opacity: [0, 1] }}
+      >
         <h1 className="hero_main_header">
           Bring everyone together to build better products.
         </h1>
@@ -11,14 +16,17 @@ function Hero() {
         </p>
 
         <button className="button button-primary hero_main_button">Get Started</button>
-      </div>
+      </motion.div>
 
-      <div className='hero_image'>
+      <motion.div
+        className='hero_image'
+        animate={{ x: [100, 0], opacity: [0, 1] }}
+      >
         <img
           src="illustration-intro.svg"
           alt="variety of charts"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -12,7 +12,11 @@ function Testimonials() {
 
   const testimonialsList = testimonials.map((testimonial, i) => {
     return (
-      <div className="testimonials_list_item" id={i} key={i}>
+      <div
+        className="testimonials_list_item"
+        id={i}
+        key={i}
+      >
         <div className="testimonials_list_item_image">
           <img src={testimonial.image} alt={`headshot of ${testimonial.name}`} />
         </div>

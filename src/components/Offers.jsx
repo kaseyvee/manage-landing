@@ -1,4 +1,5 @@
 import data from "../data";
+import { motion } from "framer-motion";
 
 function Offers() {
 
@@ -6,9 +7,15 @@ function Offers() {
 
   const offersList = offers.map((offer, i) => {
     return (
-      <div className="offers_list_item" key={i}>
+      <motion.div
+        className="offers_list_item"
+        key={i}
+        whileInView={{ x: [100, 0], opacity: [0, 1] }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 * i }}
+      >
         <div className="offers_list_item_header">
-          <h2 className="button offers_list_item_header_number">
+          <h2 className="offers_list_item_header_number">
             0{i + 1}
           </h2>
 
@@ -20,13 +27,17 @@ function Offers() {
         <p className="offers_list_item_description">
           {offer.description}
         </p>
-      </div>
+      </motion.div>
     )
   })
 
   return (
     <div className="offers">
-      <div className="offers_main">
+      <motion.div
+        className="offers_main"
+        viewport={{ once: true }}
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      >
         <h1 className="offers_main_header">
           What's different about Manage?
         </h1>
@@ -34,7 +45,7 @@ function Offers() {
         <p className="offers_main_description">
           Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
         </p>
-      </div>
+      </motion.div>
 
       <div className="offers_list">
         {offersList}

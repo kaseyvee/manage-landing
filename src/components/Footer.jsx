@@ -1,13 +1,43 @@
+import { useState } from "react";
+import { useRef } from "react";
+import { motion } from "framer-motion";
+
 function Footer() {
+  const [message, setMessage] = useState("");
+  const email = useRef();
+
+  function handleOnSubmit(e) {
+    e.preventDefault();
+    if (!email.current.value.includes("@")) {
+      return setMessage("Please insert a valid email");
+    }
+    return setMessage("You have subscribed to updates :)");
+  }
+
   return (
     <footer className="footer">
       <div className="footer_container">
         <div className="footer_container_subscribe">
-          <input
-            type="email"
-            placeholder="Updates in your inbox..."
-          />
-          <button className="button button-primary">GO</button>
+          <form
+            className="footer_container_subscribe_form"
+            onSubmit={handleOnSubmit}
+          >
+            <input
+              type="text"
+              placeholder="Updates in your inbox..."
+              ref={email}
+            />
+            <button className="button button-primary">GO</button>
+          </form>
+
+          {message &&
+            <motion.p
+              className={`footer_container_subscribe_message${message === "Please insert a valid email" ? "-error" : ""}`}
+              animate={{ x: [-10, 0], opacity: [0, 1] }}
+            >
+              {message}
+            </motion.p>
+          }
         </div>
 
         <div className="footer_container_items">

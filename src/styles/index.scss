@@ -4,10 +4,13 @@
 :root {
   @include vietnam;
   font-size: 16px;
+  overflow-x: hidden;
 
   body {
     margin: 0;
     background-color: $white;
+    overflow-x: hidden;
+    position: relative;
 
     a {
       text-decoration: none;
@@ -17,17 +20,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      // picture {
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   width: 100%;
 
-      //   img {
-      //     object-fit: cover;
-      //     width: 100%;
-      //   }
-      // }
+      picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
     }
   }
 }

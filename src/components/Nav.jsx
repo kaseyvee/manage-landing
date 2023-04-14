@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -35,17 +36,24 @@ function Nav() {
           />
         </div>}
 
-        {(navOpen || isDesktop) && <div className="nav_container_items">
-          <a href="">Pricing</a>
-          <a href="">Product</a>
-          <a href="">About Us</a>
-          <a href="">Careers</a>
-          <a href="">Community</a>
-        </div>}
+        {(navOpen || isDesktop) &&
+          <motion.div
+            className="nav_container_items"
+            animate={{ y: [10, 0], opacity: [0, 1] }}
+          >
+            <a href="">Pricing</a>
+            <a href="">Product</a>
+            <a href="">About Us</a>
+            <a href="">Careers</a>
+            <a href="">Community</a>
+          </motion.div>
+        }
 
         <button className="button button-primary nav_container_button">Get Started</button>
 
       </div>
+      
+      {navOpen && <div className="nav_overlay"></div>}
     </nav>
   );
 }

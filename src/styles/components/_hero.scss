@@ -1,12 +1,10 @@
 .hero {
-  $padding: 2rem;
-
   @include center(column);
   flex-direction: column-reverse;
   gap: 2rem;
   text-align: center;
-  padding: $padding;
-  height: calc(100vh - $padding * 2);
+  padding: 4rem 2rem 2rem 2rem;
+  height: calc(100vh - 6rem);
 
   &_image {
     display: flex;

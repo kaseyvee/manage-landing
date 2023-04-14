@@ -1,6 +1,12 @@
+import { motion } from "framer-motion";
+
 function BottomBanner() {
   return (
-    <div className="bottom-banner">
+    <motion.div
+      className="bottom-banner"
+      viewport={{ once: true }}
+      whileInView={{ scaleY: [0, 1] }}
+    >
       <div className="bottom-banner_container">
         <h1 className="bottom-banner_container_header">
           Simplify how your team works today.
@@ -10,7 +16,7 @@ function BottomBanner() {
           Get Started
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
