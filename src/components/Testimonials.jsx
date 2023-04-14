@@ -55,7 +55,7 @@ function Testimonials() {
         What they've said
       </h1>
 
-      <div className="testimonials_list">
+      <div className="testimonials_list" tabIndex="0">
         {testimonialsList}
       </div>
 

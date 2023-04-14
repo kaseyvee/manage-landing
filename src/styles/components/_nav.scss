@@ -24,6 +24,8 @@ $navPadding: 2rem;
       @include center;
       width: 25px;
       height: 25px;
+      border: none;
+      background-color: transparent
     }
   
     &_items {

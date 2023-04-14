@@ -26,15 +26,16 @@ function Nav() {
           alt="manage logo"
         />
 
-        {!isDesktop && <div
+        {!isDesktop && <button
           className="nav_container_mobile-menu"
+          // tabIndex="0"
           onClick={handleToggleNav}
         >
           <img
             src={`icon-${navOpen ? "close" : "hamburger"}.svg`}
             alt="manage logo"
           />
-        </div>}
+        </button>}
 
         {(navOpen || isDesktop) &&
           <motion.div
