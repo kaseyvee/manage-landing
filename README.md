@@ -43,7 +43,7 @@ However, I've realized what all of my projects up until now have been lacking is
 
 I've also come to understand the importance of semantic HTML when it comes to accessibility- more importantly: screen readers. As tempting as it is to only work with divs, paragraphs, and spans, this only helps to alienate a significant audience.
 
-Grace Snow, an active member in the Frontend Mentor Slack community and accessibility advocate, provided a great list of automated accessibility checkers like:
+[Grace Snow](https://fedmentor.dev/), an active member in the Frontend Mentor Slack community and accessibility advocate, provided a great list of automated accessibility checkers like:
 
 - Google lighthouse
 - W3C html validity checker
