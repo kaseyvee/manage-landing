@@ -1,6 +1,18 @@
 .offers {
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &:before {
+    content: url("/bg-tablet-pattern.svg");
+    position: absolute;
+    z-index: -10;
+    width: fit-content;
+    zoom: 35%;
+    top: -50rem;
+    right: -26rem;
+    transition-duration: 200ms;
+  }
 
   &_main {
     @include center(column);
@@ -54,8 +66,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 70rem;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
     gap: 1rem;
+
+    &:before {
+      content: url("/bg-tablet-pattern.svg");
+      position: absolute;
+      z-index: -10;
+      width: fit-content;
+      zoom: 95%;
+      top: 20rem;
+      left: -40rem;
+      transition-duration: 200ms;
+    }
 
     &_main {
       justify-content: flex-start;

@@ -10,23 +10,18 @@ import Footer from "./components/Footer"
 function App() {
 
   return (
-    <main className="App">
+    <>
       <Nav />
+      <main className="App">
 
-      <Hero />
-      <Offers />
-      <Testimonials />
-      
-      <BottomBanner />
+        <Hero />
+        <Offers />
+        <Testimonials />
+        
+        <BottomBanner />
+      </main>
       <Footer />
-
-      {/* <picture>
-        <source
-          media="(min-width: 769px)" srcSet="bg-simplify-section-desktop.svg"
-        />
-        <img src="bg-simplify-section-mobile.svg" alt="background" />
-      </picture> */}
-    </main>
+    </>
   )
 }
 

@@ -2,6 +2,9 @@
   @include center;
   background-color: $red;
   width: 100%;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
   
   &_container {
     @include center(column);
@@ -14,6 +17,19 @@
       color: $white;
       text-align: center;
       font-size: 2.25rem;
+      z-index: 1;
+
+      &:before {
+        content: url("/bg-tablet-pattern.svg");
+        position: absolute;
+        z-index: -1;
+        opacity: 0.1;
+        width: fit-content;
+        zoom: 50%;
+        top: 5rem;
+        left: -38rem;
+        transition-duration: 200ms;
+      }
     }
   }
 }
@@ -27,6 +43,25 @@
       &_header {
         max-width: 30rem;
         text-align: left;
+
+        &:before {
+          zoom: 80%;
+          top: -4rem;
+          left: 10rem;
+          overflow: hidden;
+        }
+
+        &:after {
+          content: url("/bg-tablet-pattern.svg");
+          position: absolute;
+          z-index: -1;
+          opacity: 0.1;
+          width: fit-content;
+          zoom: 60%;
+          top: -33rem;
+          right: -30rem;
+          transition-duration: 200ms;
+        }
       }
     }
   }

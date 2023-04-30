@@ -37,16 +37,16 @@ function Nav() {
         </button>}
 
         {(navOpen || isDesktop) &&
-          <motion.div
+          <motion.ul
             className="nav_container_items"
             animate={{ y: [10, 0], opacity: [0, 1] }}
           >
-            <a href="">Pricing</a>
-            <a href="">Product</a>
-            <a href="">About Us</a>
-            <a href="">Careers</a>
-            <a href="">Community</a>
-          </motion.div>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Community</a></li>
+          </motion.ul>
         }
 
         <button className="button button-primary nav_container_button">Get Started</button>

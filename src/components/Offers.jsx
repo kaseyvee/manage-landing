@@ -12,7 +12,7 @@ function Offers() {
         key={i}
         whileInView={{ x: [100, 0], opacity: [0, 1] }}
         viewport={{ once: true }}
-        transition={{ delay: 0.3 * i }}
+        transition={{ delay: 0.3, duration: 0.5 }}
       >
         <div className="offers_list_item_header">
           <h2 className="offers_list_item_header_number">
@@ -37,6 +37,7 @@ function Offers() {
         className="offers_main"
         viewport={{ once: true }}
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ delay: 0.3, duration: 0.5 }}
       >
         <h1 className="offers_main_header">
           What's different about Manage?

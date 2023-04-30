@@ -6,6 +6,7 @@ function Hero() {
       <motion.div
         className="hero_main"
         animate={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ delay: 0.3, duration: 0.5 }}
       >
         <h1 className="hero_main_header">
           Bring everyone together to build better products.
@@ -21,10 +22,11 @@ function Hero() {
       <motion.div
         className='hero_image'
         animate={{ x: [100, 0], opacity: [0, 1] }}
+        transition={{ delay: 0.3, duration: 0.5 }}
       >
         <img
           src="illustration-intro.svg"
-          alt="variety of charts"
+          alt=""
         />
       </motion.div>
     </div>

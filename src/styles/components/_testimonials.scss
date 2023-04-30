@@ -30,7 +30,7 @@
       flex-shrink: 0;
       scroll-snap-align: start;
       padding: 5rem 0 3rem 0;
-      background-color: $transparentRed2;
+      background-color: #FAFAFA;
       position: relative;
 
       &_image {
@@ -69,6 +69,8 @@
       aspect-ratio: 1;
       border-radius: 50%;
       border: 1px solid $red;
+      transition-duration: 200ms;
+      cursor: pointer;
     }
   }
 }

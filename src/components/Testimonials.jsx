@@ -6,11 +6,13 @@ import data from "../data";
 
 function Testimonials() {
   const [selectedTest, setSelectedTest] = useState(0);
+  const [transition, setTransition] = useState(false);
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
 
   const selectedStyle = {
     backgroundColor: "hsl(12, 88%, 59%)"
   }
+  const selectedTransition = 0.5;
 
   const testimonials = data.testimonials;
 
@@ -18,11 +20,11 @@ function Testimonials() {
     return (
       <div
         className="testimonials_list_item"
-        id={i}
         key={i}
+        aria-label={`testimonial ${i + 1} out of ${testimonials.length}`}
       >
         <div className="testimonials_list_item_image">
-          <img src={testimonial.image} alt={`headshot of ${testimonial.name}`} />
+          <img src={testimonial.image} alt="" />
         </div>
 
         <h2 className="testimonials_list_item_name">
@@ -37,13 +39,21 @@ function Testimonials() {
   })
 
   const carouselItems = testimonials.map((testimonial, i) => {
+    function handleNextTestimonial() {
+      if (i === selectedTest) return;
+      setTransition(true);
+      setTimeout(() => {
+        setTransition(false);
+        setSelectedTest(i);
+      }, selectedTransition * 1000)
+    }
     return (
       <button
         style={selectedTest == i ? selectedStyle : { backgroundColor: "transparent"}}
         href={`#${i}`}
         key={i}
-        onClick={() => setSelectedTest(i)}
-        aria-label={`testimonial ${i + 1} out of ${testimonials.length}`}
+        onClick={handleNextTestimonial}
+        aria-label={`see testimonial ${i + 1} out of ${testimonials.length}`}
       ></button>
     )
   })
@@ -59,9 +69,22 @@ function Testimonials() {
         What they've said
       </h1>
 
-      <div className="testimonials_list" tabIndex="0">
+      <div className="testimonials_list" tabIndex="0" aria-label="testimonial carousel">
         {isDesktop && testimonialsList}
-        {!isDesktop && <div className="testimonials_list_item">
+        {!isDesktop &&
+        <motion.div
+          className="testimonials_list_item"
+          viewport={{ once: true}}
+          animate={transition ? {
+            x: [0, -100, -150],
+            opacity: [1, 0, 0]
+          }
+            : 
+          {
+            opacity: [0, 0, 1]
+          }}
+          transition={{ duration: selectedTransition }}
+        >
           <div className="testimonials_list_item_image">
             <img src={testimonials[selectedTest].image} alt={`headshot of ${testimonials[selectedTest].name}`} />
           </div>
@@ -73,7 +96,7 @@ function Testimonials() {
           <p className="testimonials_list_item_testimony">
             {testimonials[selectedTest].testimony}
           </p>
-        </div>}
+        </motion.div>}
       </div>
 
       {!isDesktop && <div className="testimonials_carousel-nav">

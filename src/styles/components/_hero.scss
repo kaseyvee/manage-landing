@@ -5,6 +5,18 @@
   text-align: center;
   padding: 4rem 2rem 2rem 2rem;
 
+  &:before {
+    content: url("/bg-tablet-pattern.svg");
+    position: absolute;
+    z-index: -10;
+    // border: solid 3px rebeccapurple;
+    width: fit-content;
+    zoom: 50%;
+    top: -10rem;
+    right: -12rem;
+    transition-duration: 200ms;
+  }
+
   &_image {
     display: flex;
     max-width: 22rem;
@@ -41,6 +53,12 @@
     text-align: left;
     max-width: 70rem;
     margin-top: $marginTop;
+
+    &:before {
+      zoom: 95%;
+      top: -11rem;
+      right: -7rem;
+    }
   
     &_image {
       grid-column: 2;

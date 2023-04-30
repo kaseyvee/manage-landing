@@ -22,7 +22,8 @@ $navPadding: 2rem;
       width: 25px;
       height: 25px;
       border: none;
-      background-color: transparent
+      background-color: transparent;
+      cursor: pointer;
     }
   
     &_items {
@@ -36,12 +37,16 @@ $navPadding: 2rem;
       padding: 3rem 0;
       overflow: scroll;
 
-      a {
-        color: $blue;
-        transition-duration: 200ms;
+      li {
+        list-style-type: none;
 
-        &:hover {
-          opacity: 0.5;
+        a {
+          color: $blue;
+          transition-duration: 200ms;
+  
+          &:hover {
+            opacity: 0.5;
+          }
         }
       }
     }
@@ -49,7 +54,6 @@ $navPadding: 2rem;
     &_button {
       display: none;
     }
-
   }
   
   &_overlay {
@@ -68,7 +72,7 @@ $navPadding: 2rem;
   .nav {
     display: flex;
     justify-content: center;
-    background-color: $white;
+    // background-color: $white;
     
     &_container {
       max-width: 70rem;
