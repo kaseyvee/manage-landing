@@ -1,6 +1,6 @@
-# Frontend Mentor - Manage landing page solution
+# Manage Landing Page
 
-This is a solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5).
 
 Check out my other solutions on Frontend Mentor at [@kaseyvee](https://www.frontendmentor.io/profile/kaseyvee) or [frontend-mentor-challenges](https://github.com/kaseyvee/frontend-mentor-challenges).
 
@@ -28,14 +28,12 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Sass
-- Mobile-first workflow
-- Grid
-- Flexbox
 - [React](https://reactjs.org/) - JS library
 - Framer Motion - React animation library
+- Sass
+- Grid
+- Flexbox
+- Mobile-first workflow
 
 ### Continued development
 
@@ -44,3 +42,19 @@ This looked harmless at the beginning but turned out to be quite the challenge. 
 I was also lost on how the svgs supplied are supposed to be used for the background- so, I still need to look into that.
 
 Also trying to look into a way for the carousel buttons on mobile to detect scroll to update the state of each button depending on which item is in view.
+
+### What I learned
+
+The main challenge of this project were layout differences on different screens, and I felt quite proud of my ability to emulate the given designs. 
+
+However, I've realized what all of my projects up until now have been lacking is accessibility. This isn't something I realized until the completion of this project, so it hasn't been completely optimized yet, but this is something I'd like to prioritize in future projects. In the least, this website allows for keyboard navigation on all interactive elements, such as: navbar, mobile navbar, buttons, links, and the carousel.
+
+I've also come to understand the importance of semantic HTML when it comes to accessibility- more importantly: screen readers. As tempting as it is to only work with divs, paragraphs, and spans, this only helps to alienate a significant audience.
+
+[Grace Snow](https://fedmentor.dev/), an active member in the Frontend Mentor Slack community and accessibility advocate, provided a great list of automated accessibility checkers like:
+
+- Google lighthouse
+- W3C html validity checker
+- Chrome extension: Accessibility Insights
+
+This helps tackle the easiest issues. If you'd like to take it a step further, [The A11Y Project](https://www.a11yproject.com/checklist/) provides a great checklist that references [WCAG standards](https://www.w3.org/WAI/standards-guidelines/wcag/).
