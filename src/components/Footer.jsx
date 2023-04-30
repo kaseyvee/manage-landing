@@ -8,10 +8,12 @@ function Footer() {
 
   function handleOnSubmit(e) {
     e.preventDefault();
-    if (!email.current.value.includes("@")) {
-      return setMessage("Please insert a valid email");
+
+    const valid = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (email.current.value.match(valid)) {
+      return setMessage("You have subscribed to updates :)");
     }
-    return setMessage("You have subscribed to updates :)");
+    return setMessage("Please insert a valid email");
   }
 
   return (
