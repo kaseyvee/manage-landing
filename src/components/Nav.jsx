@@ -28,7 +28,6 @@ function Nav() {
 
         {!isDesktop && <button
           className="nav_container_mobile-menu"
-          // tabIndex="0"
           onClick={handleToggleNav}
         >
           <img

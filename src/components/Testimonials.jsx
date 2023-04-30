@@ -1,9 +1,12 @@
 import { useState } from "react";
-import data from "../data";
+import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 
+import data from "../data";
+
 function Testimonials() {
-  const [selectedTest, setSelectedTest] = useState(0)
+  const [selectedTest, setSelectedTest] = useState(0);
+  const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
 
   const selectedStyle = {
     backgroundColor: "hsl(12, 88%, 59%)"
@@ -35,12 +38,13 @@ function Testimonials() {
 
   const carouselItems = testimonials.map((testimonial, i) => {
     return (
-      <a
-        style={selectedTest == i ? selectedStyle : {}}
+      <button
+        style={selectedTest == i ? selectedStyle : { backgroundColor: "transparent"}}
         href={`#${i}`}
         key={i}
         onClick={() => setSelectedTest(i)}
-      ></a>
+        aria-label={`testimonial ${i + 1} out of ${testimonials.length}`}
+      ></button>
     )
   })
 
@@ -56,12 +60,25 @@ function Testimonials() {
       </h1>
 
       <div className="testimonials_list" tabIndex="0">
-        {testimonialsList}
+        {isDesktop && testimonialsList}
+        {!isDesktop && <div className="testimonials_list_item">
+          <div className="testimonials_list_item_image">
+            <img src={testimonials[selectedTest].image} alt={`headshot of ${testimonials[selectedTest].name}`} />
+          </div>
+
+          <h2 className="testimonials_list_item_name">
+            {testimonials[selectedTest].name}
+          </h2>
+
+          <p className="testimonials_list_item_testimony">
+            {testimonials[selectedTest].testimony}
+          </p>
+        </div>}
       </div>
 
-      <div className="testimonials_carousel-nav">
+      {!isDesktop && <div className="testimonials_carousel-nav">
         {carouselItems}
-      </div>
+      </div>}
 
       <button className="button button-primary">Get Started</button>
     </motion.div>

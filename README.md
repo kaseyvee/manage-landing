@@ -36,3 +36,11 @@ Users should be able to:
 - Flexbox
 - [React](https://reactjs.org/) - JS library
 - Framer Motion - React animation library
+
+### Continued development
+
+This looked harmless at the beginning but turned out to be quite the challenge. A lot of CSS decisions I made felt quite hacky- especially in the footer.
+
+I was also lost on how the svgs supplied are supposed to be used for the background- so, I still need to look into that.
+
+Also trying to look into a way for the carousel buttons on mobile to detect scroll to update the state of each button depending on which item is in view.
