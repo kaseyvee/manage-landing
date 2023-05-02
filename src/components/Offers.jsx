@@ -5,14 +5,35 @@ function Offers() {
 
   const offers = data.offers;
 
+  const containerVariants = {
+    hidden: {
+      opacity: 0
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      x: [100, 0],
+      transition: {
+        duration: 1.5
+      }
+    }
+  }
+
   const offersList = offers.map((offer, i) => {
     return (
       <motion.div
         className="offers_list_item"
         key={i}
-        whileInView={{ x: [100, 0], opacity: [0, 1] }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.5 }}
+        variants={itemVariants}
       >
         <div className="offers_list_item_header">
           <h2 className="offers_list_item_header_number">
@@ -33,12 +54,7 @@ function Offers() {
 
   return (
     <div className="offers">
-      <motion.div
-        className="offers_main"
-        viewport={{ once: true }}
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-      >
+      <div className="offers_main">
         <h1 className="offers_main_header">
           What's different about Manage?
         </h1>
@@ -46,11 +62,17 @@ function Offers() {
         <p className="offers_main_description">
           Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
         </p>
-      </motion.div>
-
-      <div className="offers_list">
-        {offersList}
       </div>
+
+      <motion.div
+        className="offers_list"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+      >
+        {offersList}
+      </motion.div>
     </div>
   );
 }
